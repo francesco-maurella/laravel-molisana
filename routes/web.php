@@ -24,7 +24,7 @@ Route::get('products/{id}', function ($id) {
     $pasta = config('pasta');
     return view('products.product',
     [
-      'idProduct' => $id,
+      'idProduct' => $id - 1,
       'pastaList' => $pasta
     ]
   );

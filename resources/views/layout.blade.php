@@ -12,7 +12,7 @@
 
       <!-- INTESTAZIONE -->
       <header class="top-bar">
-        <div class="tob-bar-logo">
+        <div class="top-bar-logo">
           <img src="{{asset('img/01-logo.png')}}" alt="Molisana">
         </div>
         <nav class="top-bar-menu">
@@ -32,9 +32,7 @@
       <!-- / INTESTAZIONE -->
 
       <!-- MAIN CONTENT -->
-      <main class="main">
-        @yield('content')
-      </main>
+      @yield('main')
       <!-- / MAIN CONTENT -->
 
     </div>

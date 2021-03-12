@@ -122,5 +122,4 @@
     }
     ]';
 
-
   return json_decode($data, true);

@@ -1,5 +1,4 @@
 @php
-
   $pastaTipi = [];
 
   foreach ($pastaList as $pasta) {
@@ -8,29 +7,39 @@
     }
   };
 
+  function getPlurale($parola){
+    $plurale = substr($parola, 0, (strlen($parola) - 1));
+    if ($plurale[strlen($plurale) - 1] === 'g') {
+      $plurale .= 'he';
+    } else {
+      $plurale .= 'e';
+    };
+    return $plurale;
+  };
 @endphp
 
 @extends('layout', ['pastaList' => $pastaList])
-@section('content')
-  <div class="main-products-list">
-    @foreach ($pastaTipi as $tipo)
-      <div>
-        @php
-          $titolo = 'Le ' . substr($tipo, 0, strlen($tipo,) - 1) . "e";
-        @endphp
-        <h2>{{$titolo}}</h2>
-        <ul>
-          @foreach ($pastaList as $id => $pasta)
-            @if ($pasta['tipo'] === $tipo)
-              <li>
-                <a href="products/{{$id}}">
-                  <img src="{{$pasta['src']}}" alt="{{$pasta['titolo']}}">
-                </a>
-              </li>
-            @endif
-          @endforeach
-        </ul>
-      </div>
+@section('main')
+  <main class="home-content">
+    <div class="container">
+      @foreach ($pastaTipi as $tipo)
+        <section class="home-content-products">
+          @php
+          $titolo = getPlurale($tipo);
+          @endphp
+          <h2>Le {{$titolo}}</h2>
+          <ul class="home-content-products-list">
+            @foreach ($pastaList as $id => $pasta)
+              @if ($pasta['tipo'] === $tipo)
+                <li>
+                  <a href="products/{{$id + 1}}">
+                    <img src="{{$pasta['src']}}" alt="{{$pasta['titolo']}}">
+                  </a>
+                </li>
+              @endif
+            @endforeach
+          </ul>
+        </section>
     @endforeach
-  </div>
+  </main>
 @endsection
