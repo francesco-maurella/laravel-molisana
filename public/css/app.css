@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Teko:wght@300;400;500&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,12 +22,12 @@ ul {
 .container {
   width: 100%;
   max-width: 1200px;
+  font-size: 15.5px;
   margin: auto;
 }
 
 .top-bar {
   font-family: "Teko";
-  font-size: 28px;
   text-align: center;
 }
 .top-bar a {
@@ -36,6 +37,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.8em;
 }
 .top-bar-menu ul li {
   padding: 10px 22px;
@@ -60,7 +62,7 @@ ul {
 }
 .home-content-products h2 {
   padding: 30px 0;
-  font-size: 32px;
+  font-size: 2em;
   font-weight: 600;
   color: #002D73;
   text-shadow: 1px 1px 8px #FFF;
@@ -92,15 +94,21 @@ ul {
   position: relative;
 }
 .product-content-top img {
-  width: 100%;
+  max-width: 95%;
 }
 .product-content-top .title {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 600;
+}
+.product-content-top .title span {
+  margin: 0 25px;
+}
+.product-content-top .title a {
+  color: #002D73;
 }
 .product-content-bottom {
   line-height: 2em;

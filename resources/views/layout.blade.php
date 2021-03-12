@@ -12,22 +12,24 @@
 
       <!-- INTESTAZIONE -->
       <header class="top-bar">
-        <div class="top-bar-logo">
-          <img src="{{asset('img/01-logo.png')}}" alt="Molisana">
+        <div class="container">
+          <div class="top-bar-logo">
+            <img src="{{asset('img/01-logo.png')}}" alt="Molisana">
+          </div>
+          <nav class="top-bar-menu">
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="#">Prodotti</a>
+              </li>
+              <li>
+                <a href="#">News</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav class="top-bar-menu">
-          <ul>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="#">Prodotti</a>
-            </li>
-            <li>
-              <a href="#">News</a>
-            </li>
-          </ul>
-        </nav>
       </header>
       <!-- / INTESTAZIONE -->
 
