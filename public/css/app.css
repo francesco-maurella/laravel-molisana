@@ -78,3 +78,30 @@ ul {
   max-width: 100%;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+.product-content {
+  background-color: #B7DAE5;
+  font-family: "Open Sans";
+  color: #002D73;
+}
+.product-content .container {
+  padding: 60px 0;
+}
+.product-content-top {
+  width: 100%;
+  position: relative;
+}
+.product-content-top img {
+  width: 100%;
+}
+.product-content-top .title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 24px;
+  font-weight: 600;
+}
+.product-content-bottom {
+  line-height: 2em;
+}
