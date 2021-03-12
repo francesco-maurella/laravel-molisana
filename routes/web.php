@@ -14,11 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home.home');
+    $pasta = config('pasta');
+    return view('home.home',
+    ['pastaList' => $pasta]
+  );
 });
 
 Route::get('products/{id}', function ($id) {
+    $pasta = config('pasta');
     return view('products.product',
-    ['idProduct' => $id]
+    [
+      'idProduct' => $id,
+      'pastaList' => $pasta
+    ]
   );
 });

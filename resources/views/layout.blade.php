@@ -13,10 +13,10 @@
       <!-- INTESTAZIONE -->
       <header class="top-bar">
         <div class="tob-bar-logo">
-          <img src="img/01-logo.png" alt="Molisana">
+          <img src="{{asset('img/01-logo.png')}}" alt="Molisana">
         </div>
         <nav class="top-bar-menu">
-          <ul id="yo">
+          <ul>
             <li>
               <a href="/">Home</a>
             </li>
