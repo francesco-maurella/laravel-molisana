@@ -148,22 +148,13 @@
 
     <main>
 
-      @foreach ($pastaTipi as $tipo)
-        <div>
-          <h2>{{$tipo}}</h2>
+
           <ul>
-            @foreach ($pastaList as $id => $pasta)
-              @if ($pasta['tipo'] === $tipo)
                 <li>
-                  <a href="products/{{$id}}">
-                    <img src="{{$pasta['src']}}" alt="{{$pasta['titolo']}}">
-                  </a>
+                  <img src="{{$pastaList[$idProduct]['src']}}" alt="{{$pastaList[$idProduct]['titolo']}}">
+                  <div>{{$pastaList[$idProduct]['titolo']}}</div>
                 </li>
-              @endif
-            @endforeach
           </ul>
-        </div>
-      @endforeach
 
     </main>
 
