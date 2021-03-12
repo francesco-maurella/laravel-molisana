@@ -20,22 +20,19 @@ ul {
 .top-bar {
   padding: 20px;
   text-align: center;
-
-    &-menu ul {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      li {
-        margin: 0 10px;
-      }
-    }
+}
+.top-bar-menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-bar-menu ul li {
+  margin: 0 10px;
 }
 
 .main {
   text-align: center;
-
-    img {
-      width: 35%;
-    }
+}
+.main img {
+  width: 35%;
 }

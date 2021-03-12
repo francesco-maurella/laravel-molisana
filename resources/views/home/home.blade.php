@@ -135,37 +135,24 @@
 
 @endphp
 
-
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PHP/LARAVEL - BLADE [Molisana]</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-  </head>
-  <body>
-
-    <main>
-
-      @foreach ($pastaTipi as $tipo)
-        <div>
-          <h2>{{$tipo}}</h2>
-          <ul>
-            @foreach ($pastaList as $id => $pasta)
-              @if ($pasta['tipo'] === $tipo)
-                <li>
-                  <a href="products/{{$id}}">
-                    <img src="{{$pasta['src']}}" alt="{{$pasta['titolo']}}">
-                  </a>
-                </li>
-              @endif
-            @endforeach
-          </ul>
-        </div>
-      @endforeach
-
-    </main>
-
-  </body>
-</html>
+@extends('layout', ['pastaList' => $pastaList])
+@section('content')
+  <div class="main-products-list">
+    @foreach ($pastaTipi as $tipo)
+      <div>
+        <h2>{{$tipo}}</h2>
+        <ul>
+          @foreach ($pastaList as $id => $pasta)
+            @if ($pasta['tipo'] === $tipo)
+              <li>
+                <a href="products/{{$id}}">
+                  <img src="{{$pasta['src']}}" alt="{{$pasta['titolo']}}">
+                </a>
+              </li>
+            @endif
+          @endforeach
+        </ul>
+      </div>
+    @endforeach
+  </div>
+@endsection
