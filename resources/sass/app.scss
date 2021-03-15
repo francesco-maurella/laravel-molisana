@@ -22,6 +22,12 @@ ul {
 .wrapper {
   width: 100vw;
   max-width: 100%;
+  animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
 }
 
 .container {
@@ -31,36 +37,54 @@ ul {
   margin: auto;
 }
 
+.img-resp {
+  max-width: 100%;
+}
+
 .top-bar {
-  font-family: 'Teko';
+  font-family: $font-titles;
   text-align: center;
 
     a {
       color: $top-links-col;
     }
 
-    &-menu ul {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: $top-txt-size;
+    &-menu {
 
-      li {
-        padding: 10px 22px;
+      &-hamb {
+        text-align: center;
+        font-size: $top-txt-size;
+
+        @media (min-width: 992px) {
+          display: none;
+        }
       }
 
-      li:hover {
-        background-color: $top-hov-links-col;
+      &-list {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        font-size: $top-txt-size;
+
+        li {
+          padding: 10px 22px;
+          transition: 0.4s
+        }
+
+        li:hover {
+          background-color: $top-hov-links-col;
+        }
+
+        @media (min-width: 992px) {
+          display: flex;
+        }
       }
     }
+
 
     &-logo {
       padding: 40px 0;
       max-height: 220px;
-
-        img {
-          max-width: 100%;
-        }
     }
 }
 
@@ -69,7 +93,7 @@ ul {
   background-size: 100%;
 
     &-products {
-      font-family: 'Open Sans';
+      font-family: $font-maintxt;
 
         h2 {
           padding: 30px 0;
@@ -85,8 +109,15 @@ ul {
           flex-wrap: wrap;
 
             li {
-              width: calc(100% / 3);
               padding: 10px;
+
+                @media (min-width: 768px) {
+                  width: calc(100% / 2);
+                }
+
+                @media (min-width: 992px) {
+                  width: calc(100% / 3);
+                }
 
                 img {
                   max-width: 100%;
@@ -99,7 +130,7 @@ ul {
 
 .product-content {
   background-color: $content-bg-col;
-  font-family: 'Open Sans';
+  font-family: $font-maintxt;
   color: $content-txt-col;
 
     .container {
@@ -124,6 +155,7 @@ ul {
 
             span {
               margin: 0 25px;
+              text-transform: capitalize;
             }
 
             a {
@@ -133,5 +165,60 @@ ul {
     }
     &-bottom {
       line-height: 2em;
+    }
+}
+
+.footer {
+  background: url('/img/02-footer.jpg') bottom left no-repeat;
+  background-size: 100%;
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 60px;
+      padding-bottom: 90px;
+      font-family: $font-maintxt;
+      color: $footer-links-col;
+
+        a {
+          color: $footer-links-col;
+        }
+    }
+
+    &-credits {
+      width: 100%;
+      padding: 0 15px;
+
+        @media (min-width: 992px) {
+          width: 35%;
+        }
+
+        .logo {
+          max-height: 240px;
+          margin-bottom: 15px;
+        }
+    }
+
+    &-menu {
+      width: 100%;
+
+        @media (min-width: 992px) {
+          width: 65%;
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        ul {
+          width: 50%;
+          padding: 0 15px;
+          margin-bottom: 20px;
+        }
+
+        .title {
+          margin-bottom: 10px;
+          font-family: $font-titles;
+          font-size: $top-txt-size;
+          text-transform: uppercase;
+        }
     }
 }
