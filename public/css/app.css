@@ -17,27 +17,8 @@ ul {
 .wrapper {
   width: 100vw;
   max-width: 100%;
-  -webkit-animation: fadeIn ease 2s;
-          animation: fadeIn ease 2s;
 }
 
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .container {
   width: 100%;
   max-width: 1200px;
@@ -91,6 +72,24 @@ ul {
 .home-content {
   background-image: url("/img/00-bg.jpg");
   background-size: 100%;
+  -webkit-animation: fadeIn ease 2s;
+          animation: fadeIn ease 2s;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .home-content-products {
   font-family: "Open Sans";

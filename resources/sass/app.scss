@@ -22,12 +22,6 @@ ul {
 .wrapper {
   width: 100vw;
   max-width: 100%;
-  animation: fadeIn ease 2s;
-}
-
-@keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
 }
 
 .container {
@@ -91,6 +85,12 @@ ul {
 .home-content {
   background-image: url('/img/00-bg.jpg');
   background-size: 100%;
+  animation: fadeIn ease 2s;
+
+    @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
 
     &-products {
       font-family: $font-maintxt;
